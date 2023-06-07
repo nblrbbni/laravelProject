@@ -7,6 +7,13 @@ use Livewire\Component;
 
 class RoleComponent extends Component
 {
+    public function destroy($roleId)
+    {
+        $findRole = Role::find($roleId);
+        $findRole->delete;
+        session()->flash('message', 'Dokumen ' . $findRole->role . ' Berhasil dihapus!');
+        return redirect(back());
+    }
     public function render()
     {
         $allRoleCategories = Role::query()->latest()->get();

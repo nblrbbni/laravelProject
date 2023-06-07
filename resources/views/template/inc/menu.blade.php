@@ -23,7 +23,7 @@
             <a class="dropdown-item {{ Request::path() === 'role' ? 'text-light bg-primary' : '' }}" href="{{ route('role') }}" rel="noopener">
                 Role
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item {{ Request::path() === 'pengguna' ? 'text-light bg-primary' : '' }}" href="{{ route('pengguna') }}" rel="noopener">
                 Pengguna
             </a>
             <a class="dropdown-item" href="#" rel="noopener">

@@ -7,6 +7,14 @@ use Livewire\Component;
 
 class ArsipComponent extends Component
 {
+    public function destroy($arsipId)
+    {
+        $findArsip = Arsip::find($arsipId);
+        $findArsip->delete;
+        session()->flash('message', 'Dokumen ' . $findArsip->name. ' Berhasil dihapus!');
+        return redirect(back());
+    }
+    
     public function render()
     {
         $allCategories = Arsip::query()->latest()->get();

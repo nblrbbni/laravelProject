@@ -18,8 +18,8 @@
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-success">Simpan</button>
-                <a href="{{ route('role') }}">
-                    <button type="submit" class="btn btn-red">Kembali</button>
+                <a href="">
+                    <button class="btn btn-red">Kembali</button>
                 </a>
             </form>
         </div>

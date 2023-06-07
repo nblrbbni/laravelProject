@@ -54,9 +54,9 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="btn btn-success mt-3">Simpan</button>
-                <a href="{{ route('arsip') }}">
-                    <button class="btn btn-red mt-3">Kembali</button>
+                <button type="submit" class="btn btn-success">Simpan</button>
+                <a href="">
+                    <button class="btn btn-red">Kembali</button>
                 </a>
             </form>
         </div>

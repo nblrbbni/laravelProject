@@ -8,6 +8,10 @@
         @endif
     </div>
 
+     <div class="title">
+        <h1>Tambah Role</h1>
+    </div>
+
     <div class="card">
         <div class="card-body">
             <form wire:submit="create" autocomplete="off">
@@ -19,6 +23,9 @@
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-success">Simpan</button>
+                <a href="">
+                    <button class="btn btn-red">Kembali</button>
+                </a>
             </form>
         </div>
     </div>
