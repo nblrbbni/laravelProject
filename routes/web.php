@@ -2,10 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\HomeComponent;
+use App\Http\Livewire\Pages\RoleComponent;
 use App\Http\Livewire\Pages\ArsipComponent;
 use App\Http\Livewire\Pages\PerusahaanComponent;
 use App\Http\Livewire\Pages\Arsip\CreateComponent;
 use App\Http\Livewire\Pages\Arsip\UpdateComponent;
+use App\Http\Livewire\Pages\Role\CreateRoleComponent;
+use App\Http\Livewire\Pages\Role\UpdateRoleComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +26,6 @@ Route::get("/arsip", ArsipComponent::class)->name("arsip");
 Route::get("/arsip/create", CreateComponent::class)->name("arsip.create");
 Route::get("/arsip/{arsipId}/update", UpdateComponent::class)->name("arsip.update");
 Route::get("/perusahaan", PerusahaanComponent::class)->name("perusahaan");
+Route::get("/role", RoleComponent::class)->name("role");
+Route::get("/role/create", CreateRoleComponent::class)->name("role.create");
+Route::get("/role/{roleId}/update", UpdateRoleComponent::class)->name("role.update");

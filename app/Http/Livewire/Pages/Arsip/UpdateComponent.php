@@ -4,9 +4,11 @@ namespace App\Http\Livewire\Pages\Arsip;
 
 use App\Models\Arsip;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class UpdateComponent extends Component
 {
+    use WithFileUploads;
     public $name, $upload, $date, $file;
     public $arsipId;
     public $findArsip;

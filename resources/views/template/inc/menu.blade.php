@@ -1,17 +1,17 @@
 <ul class="navbar-nav">
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('dashboard') }}">
+        <a class="nav-link {{ Request::path() === '/' ? 'text-primary' : '' }}" href="{{ route('dashboard') }}">
             <span class="nav-link-title"> Home </span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('arsip') }}">
+        <a class="nav-link {{ Request::path() === 'arsip' ? 'text-primary' : '' }}" href="{{ route('arsip') }}">
             <span class="nav-link-title"> Arsip </span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('perusahaan') }}">
-            <span class="nav-link-title"> Perusahaan </span>
+        <a class="nav-link {{ Request::path() === 'perusahaan' ? 'text-primary' : '' }}" href="{{ route('perusahaan') }}">
+            <span class="nav-link-title"> Galeri File </span>
         </a>
     </li>
     <li class="nav-item dropdown">
@@ -20,16 +20,16 @@
             <span class="nav-link-title"> Pengaturan </span>
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" target="_blank" rel="noopener">
+            <a class="dropdown-item {{ Request::path() === 'role' ? 'text-light bg-primary' : '' }}" href="{{ route('role') }}" rel="noopener">
                 Role
             </a>
             <a class="dropdown-item" href="#">
                 Pengguna
             </a>
-            <a class="dropdown-item" href="#" target="_blank" rel="noopener">
+            <a class="dropdown-item" href="#" rel="noopener">
                 Klasifikasi
             </a>
-            <a class="dropdown-item" href="#" target="_blank" rel="noopener">
+            <a class="dropdown-item" href="#" rel="noopener">
                 Sifat Surat
             </a>
         </div>

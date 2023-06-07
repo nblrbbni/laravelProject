@@ -24,7 +24,7 @@ class CreateComponent extends Component
             'date' => $this->date,
             'file' => $this->file
         ]);
-        session()->flash('message', 'Arsip dokumen sukses!');
+        session()->flash('message', 'Arsip Dokumen Berhasil!');
         return redirect(back());
     }
     public function render()
