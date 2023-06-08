@@ -25,7 +25,6 @@ class CreatePenggunaComponent extends Component
             'roleuser' => $this->roleuser
         ]);
         session()->flash('message', 'Berhasil menambahkan pengguna');
-        return redirect(back());
     }
     public function render()
     {

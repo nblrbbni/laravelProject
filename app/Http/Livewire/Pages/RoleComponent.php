@@ -12,13 +12,13 @@ class RoleComponent extends Component
         $findRole = Role::find($roleId);
         $findRole->delete;
         session()->flash('message', 'Dokumen ' . $findRole->role . ' Berhasil dihapus!');
-        return redirect(back());
     }
+
     public function render()
     {
-        $allRoleCategories = Role::query()->latest()->get();
+        $allCategories = Role::query()->latest()->get();
         return view('livewire.pages.role-component', [
-            'allCategories' => $allRoleCategories
+            'allCategories' => $allCategories
         ])->layout('template.app');
     }
 }

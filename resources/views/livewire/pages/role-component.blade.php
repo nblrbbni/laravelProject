@@ -8,7 +8,7 @@
                         <tr>
                             <th>Nomor</th>
                             <th>Role</th>
-                            <th class="w-1"></th>
+                            <th class="w-1">Opsi</th>
                         </tr>
                     </thead>
                     <tbody>

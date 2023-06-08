@@ -18,8 +18,7 @@
                             <th>Nama File</th>
                             <th>Diupload oleh</th>
                             <th>Tanggal</th>
-                            <th>Opsi</th>
-                            <th class="w-1"></th>
+                            <th class="w-1">Opsi</th>
                         </tr>
                     </thead>
                     <tbody>

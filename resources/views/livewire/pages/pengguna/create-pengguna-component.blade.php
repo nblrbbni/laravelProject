@@ -1,7 +1,4 @@
 <div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
-</div>
-<div>
 
     <div>
         @if (session()->has('message'))
@@ -53,17 +50,17 @@
                 </div>
 
                 <div class="mb-3">
-                    <div wire:model="roleuser" class="form-label">Pilih Role:</div>
-                    <div>
+                    <div class="form-label">Pilih Role:</div>
+                    <div wire:model="roleuser">
                         <label class="form-check form-check-inline">
-                            <input wire:model="roleuser" class="form-check-input" type="radio" name="radios-inline" checked="">
+                            <input value="Admin" class="form-check-input" type="radio" name="radios-inline">
                             @error('roleuser')
                                 <span class="error">{{ $message }}</span>
                             @enderror
                             <span class="form-check-label">Admin</span>
                         </label>
                         <label class="form-check form-check-inline">
-                            <input wire:model="roleuser" class="form-check-input" type="radio" name="radios-inline">
+                            <input value="User  " class="form-check-input" type="radio" name="radios-inline">
                             @error('roleuser')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -71,6 +68,7 @@
                         </label>
                     </div>
                 </div>
+
                 <button type="submit" class="btn btn-success">Simpan</button>
                 <a href="">
                     <button class="btn btn-red">Kembali</button>
