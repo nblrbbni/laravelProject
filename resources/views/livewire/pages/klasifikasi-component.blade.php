@@ -1,5 +1,5 @@
 <div class="mt-3">
-    <a href="{{ route('role.create') }}" class="btn btn-success">Tambah Role</a>
+    <a href="{{ route('klasifikasi.create') }}" class="btn btn-success">Tambah Klasifikasi</a>
     <div class="mt-2">
         @if (session()->has('message'))
             <div class="alert alert-success">
@@ -14,7 +14,8 @@
                     <thead>
                         <tr>
                             <th>Nomor</th>
-                            <th>Role</th>
+                            <th>Nama</th>
+                            <th>Jabatan</th>
                             <th class="w-1">Opsi</th>
                         </tr>
                     </thead>
@@ -22,9 +23,10 @@
                         @foreach ($allCategories as $item)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->role }}</td>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->jabatan }}</td>
                                 <td class="d-flex gap-1">
-                                    <a href="{{ route('role.update', $item->id) }}" class="btn btn-blue">Edit</a>
+                                    <a href="{{ route('klasifikasi.update', $item->id) }}" class="btn btn-blue">Edit</a>
                                     <a href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
                                 </td>
                             </tr>

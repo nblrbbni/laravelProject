@@ -1,4 +1,4 @@
-<div>
+<div class="mt-3">
     <a href="{{ route('arsip.create') }}" class="btn btn-success">Tambah Arsip</a>
     <div class="mt-2">
         @if (session()->has('message'))

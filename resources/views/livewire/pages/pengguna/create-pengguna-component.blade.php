@@ -8,7 +8,7 @@
         @endif
     </div>
 
-     <div class="title">
+     <div class="title mt-3">
         <h1>Tambah Pengguna</h1>
     </div>
 
@@ -16,15 +16,16 @@
         <div class="card-body">
             <form wire:submit="create" autocomplete="off">
                 <div class="mb-3">
-                    <input type="text" wire:model="name" class="form-control" name="example-text-input" placeholder="Masukkan nama lengkap">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" wire:model="name" class="form-control" placeholder="Masukkan nama lengkap">
                     @error('name')
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
 
-                <div class="mb-3">
-                    <select type="text" class="form-select tomselected ts-hidden-accessible" id="select-users"
-                        value="" tabindex="1" wire:model="jabatan">
+                 <div class="mb-3">
+                    <div class="form-label">Jabatan</div>
+                    <select type="text" class="form-select" id="select-users" wire:model="jabatan">
                         <option selected="">Pilih Jabatan Anda</option>
                         <option value="Kepala Sekolah">Kepala Sekolah</option>
                         <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
@@ -36,14 +37,16 @@
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" wire:model="email" class="form-control" name="example-text-input" placeholder="Masukkan email">
+                    <div class="form-label">Email</div>
+                    <input type="text" wire:model="email" class="form-control" placeholder="Masukkan email">
                     @error('email')
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" wire:model="password" class="form-control" name="example-text-input" placeholder="Masukkan passsword">
+                    <div class="form-label">Password</div>
+                    <input type="text" wire:model="password" class="form-control" placeholder="Masukkan passsword">
                     @error('password')
                         <span class="error">{{ $message }}</span>
                     @enderror
@@ -70,8 +73,8 @@
                 </div>
 
                 <button type="submit" class="btn btn-success">Simpan</button>
-                <a href="">
-                    <button class="btn btn-red">Kembali</button>
+                <a href="{{ route('pengguna') }}" class="btn btn-red">
+                   Kembali
                 </a>
             </form>
         </div>

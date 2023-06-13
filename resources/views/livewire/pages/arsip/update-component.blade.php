@@ -8,8 +8,8 @@
         @endif
     </div>
 
-    <div class="title">
-        <h1>Tambah Arsip</h1>
+    <div class="title mt-3">
+        <h1>Update Arsip</h1>
     </div>
 
     <div class="card">
@@ -25,9 +25,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Diupload oleh</label>
-                    <select type="text" class="form-select tomselected ts-hidden-accessible" id="select-users"
-                        value="" tabindex="1" wire:model="upload">
+                    <div class="form-label">Diupload oleh</div>
+                    <select type="text" class="form-select" id="select-users" wire:model="upload">
                         <option selected="">Pilih Jabatan Anda</option>
                         <option value="Kepala Sekolah">Kepala Sekolah</option>
                         <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
@@ -54,9 +53,9 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="btn btn-success mt-3">Update</button>
-                <a href="{{ route('arsip') }}">
-                    <button class="btn btn-red mt-3">Kembali</button>
+                <button type="submit" class="btn btn-success">Simpan</button>
+                <a href="{{ route('arsip') }}" class="btn btn-red">
+                   Kembali
                 </a>
             </form>
         </div>

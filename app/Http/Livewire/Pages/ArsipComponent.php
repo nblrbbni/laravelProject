@@ -10,7 +10,7 @@ class ArsipComponent extends Component
     public function destroy($arsipId)
     {
         $findArsip = Arsip::find($arsipId);
-        $findArsip->delete;
+        $findArsip->delete();
         session()->flash('message', 'Dokumen ' . $findArsip->name. ' Berhasil dihapus!');
     }
 

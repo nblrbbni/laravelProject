@@ -12,14 +12,14 @@
             <form wire:submit="update" autocomplete="off">
                 <div class="mb-3">
                     <label class="form-label">Role</label>
-                    <input type="text" wire:model="role" class="form-control" name="example-text-input" placeholder="Masukkan nama role">
+                    <input type="text" wire:model="role" class="form-control" placeholder="Masukkan nama role">
                     @error('name')
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-success">Simpan</button>
-                <a href="">
-                    <button class="btn btn-red">Kembali</button>
+                <a href="{{ route('role') }}" class="btn btn-red">
+                   Kembali
                 </a>
             </form>
         </div>

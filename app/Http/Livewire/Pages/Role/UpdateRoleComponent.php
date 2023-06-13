@@ -27,7 +27,7 @@ class UpdateRoleComponent extends Component
             'role' => $this->role
         ]);
         session()->flash('message', 'Update dokumen sukses!');
-        return redirect()->back();
+        return redirect(route('role'));
     }
     public function render()
     {

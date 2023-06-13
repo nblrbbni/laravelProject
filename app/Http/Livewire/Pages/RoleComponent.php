@@ -10,7 +10,7 @@ class RoleComponent extends Component
     public function destroy($roleId)
     {
         $findRole = Role::find($roleId);
-        $findRole->delete;
+        $findRole->delete();
         session()->flash('message', 'Dokumen ' . $findRole->role . ' Berhasil dihapus!');
     }
 

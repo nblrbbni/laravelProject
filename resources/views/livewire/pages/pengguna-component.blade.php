@@ -1,4 +1,4 @@
-<div>
+<div class="mt-3">
     <a href="{{ route('pengguna.create') }}" class="btn btn-success">Tambah Pengguna</a>
     <div class="mt-2">
         @if (session()->has('message'))

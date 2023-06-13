@@ -7,6 +7,9 @@ use App\Http\Livewire\Pages\ArsipComponent;
 use App\Http\Livewire\Pages\PerusahaanComponent;
 use App\Http\Livewire\Pages\Arsip\CreateComponent;
 use App\Http\Livewire\Pages\Arsip\UpdateComponent;
+use App\Http\Livewire\Pages\Klasifikasi\CreateKlasifikasiComponent;
+use App\Http\Livewire\Pages\Klasifikasi\UpdateKlasifikasiComponent;
+use App\Http\Livewire\Pages\KlasifikasiComponent;
 use App\Http\Livewire\Pages\Pengguna\CreatePenggunaComponent;
 use App\Http\Livewire\Pages\Pengguna\UpdatePenggunaComponent;
 use App\Http\Livewire\Pages\PenggunaComponent;
@@ -38,3 +41,7 @@ Route::get("/pengguna/create", CreatePenggunaComponent::class)->name("pengguna.c
 Route::get("/pengguna/{penggunaid}/update", UpdatePenggunaComponent::class)->name("pengguna.update");
 Route::delete("/pengguna/{penggunaid}/delete", PenggunaComponent::class)->name("pengguna.destroy");
 Route::get("/perusahaan", PerusahaanComponent::class)->name("perusahaan");
+Route::get("/klasifikasi", KlasifikasiComponent::class)->name("klasifikasi");
+Route::get("/klasifikasi/create", CreateKlasifikasiComponent::class)->name("klasifikasi.create");
+Route::get("/klasifikasi/{klasifikasiId}/update", UpdateKlasifikasiComponent::class)->name("klasifikasi.update");
+Route::delete("/klasifikasi/{klasifikasiId}/delete", KlasifikasiComponent::class)->name("klasifikasi.destroy");

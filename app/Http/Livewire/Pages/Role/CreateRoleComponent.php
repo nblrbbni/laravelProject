@@ -19,7 +19,7 @@ class CreateRoleComponent extends Component
             'role' => $this->role
         ]);
         session()->flash('message', 'Berhasil menambahkan role!');
-        return redirect(back());
+        return redirect(route('role'));
     }
     public function render()
     {

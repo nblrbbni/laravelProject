@@ -25,7 +25,7 @@ class CreateComponent extends Component
             'file' => $this->file
         ]);
         session()->flash('message', 'Arsip Dokumen Berhasil!');
-        return redirect(back());
+        return redirect(route('arsip'));
     }
     public function render()
     {

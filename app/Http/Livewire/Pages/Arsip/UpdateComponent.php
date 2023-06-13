@@ -35,7 +35,7 @@ class UpdateComponent extends Component
             'file' => $this->file
         ]);
         session()->flash('message', 'Update dokumen sukses!');
-        return redirect()->back();
+        return redirect(route('arsip'));
     }
     public function render()
     {
