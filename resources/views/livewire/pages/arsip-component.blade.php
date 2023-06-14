@@ -1,4 +1,4 @@
-<div class="mt-3">
+<div class="mt-3 mb-3">
     <a href="{{ route('arsip.create') }}" class="btn btn-success">Tambah Arsip</a>
     <div class="mt-2">
         @if (session()->has('message'))
@@ -22,9 +22,10 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $i = $allCategories->firstItem() ?>
                         @foreach ($allCategories as $item)
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $i }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->file }}</td>
                                 <td>{{ $item->upload }}</td>
@@ -32,15 +33,16 @@
                                 <td class="d-flex gap-1">
                                     <a href="{{ route('arsip.update', $item->id) }}" class="btn btn-blue">Edit</a>
                                     <a href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
-                                    <a href="{{ $item->file }}" download>
-                                        <button class="btn btn-green">Unduh</button>
-                                    </a>
+                                    <a href="/" class="btn btn-green">Unduh</a>
                                 </td>
                             </tr>
+                            <?php $i++ ?>
                         @endforeach
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
 </div>
+{{ $allCategories->links() }}

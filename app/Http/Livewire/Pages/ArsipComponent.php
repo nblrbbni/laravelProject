@@ -16,7 +16,7 @@ class ArsipComponent extends Component
 
     public function render()
     {
-        $allCategories = Arsip::query()->latest()->get();
+        $allCategories = Arsip::query()->latest()->paginate(5);
         return view('livewire.pages.arsip-component', [
             'allCategories' => $allCategories
         ])->layout('template.app');

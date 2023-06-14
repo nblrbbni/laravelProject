@@ -14,7 +14,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form wire:submit="create" autocomplete="off">
+            <form wire:submit.prevent="create" autocomplete="off">
                 <div class="mb-3">
                     <label class="form-label">Nama Dokumen</label>
                     <input type="text" wire:model="name" class="form-control"
@@ -35,6 +35,9 @@
                         <option value="Staff">Staff</option>
                         <option value="Guru">Guru</option>
                     </select>
+                    @error('name')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="mb-3">

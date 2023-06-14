@@ -38,8 +38,8 @@ Route::get("/role/{roleId}/update", UpdateRoleComponent::class)->name("role.upda
 Route::delete("/role/{roleId}/delete", RoleComponent::class)->name("role.destroy");
 Route::get("/pengguna", PenggunaComponent::class)->name("pengguna");
 Route::get("/pengguna/create", CreatePenggunaComponent::class)->name("pengguna.create");
-Route::get("/pengguna/{penggunaid}/update", UpdatePenggunaComponent::class)->name("pengguna.update");
-Route::delete("/pengguna/{penggunaid}/delete", PenggunaComponent::class)->name("pengguna.destroy");
+Route::get("/pengguna/{penggunaId}/update", UpdatePenggunaComponent::class)->name("pengguna.update");
+Route::delete("/pengguna/{penggunaId}/delete", PenggunaComponent::class)->name("pengguna.destroy");
 Route::get("/perusahaan", PerusahaanComponent::class)->name("perusahaan");
 Route::get("/klasifikasi", KlasifikasiComponent::class)->name("klasifikasi");
 Route::get("/klasifikasi/create", CreateKlasifikasiComponent::class)->name("klasifikasi.create");

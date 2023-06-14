@@ -25,7 +25,7 @@
                                 <td>{{ $item->role }}</td>
                                 <td class="d-flex gap-1">
                                     <a href="{{ route('role.update', $item->id) }}" class="btn btn-blue">Edit</a>
-                                    <a href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
+                                    <a onsubmit="return confirm(Yakin ingin menghapus data?)" href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

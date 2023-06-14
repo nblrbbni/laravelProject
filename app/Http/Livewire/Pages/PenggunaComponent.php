@@ -10,13 +10,14 @@ class PenggunaComponent extends Component
     public function destroy($penggunaId)
     {
         $findPengguna = Pengguna::find($penggunaId);
-        $findPengguna->delete;
+        $findPengguna->delete();
         session()->flash('message', 'Dokumen ' . $findPengguna->pengguna . ' Berhasil dihapus!');
+        return redirect(route('pengguna'));
     }
 
     public function render()
     {
-        $allCategories = Pengguna::query()->latest()->get();
+        $allCategories = Pengguna::query()->latest()->paginate(2);
         return view('livewire.pages.pengguna-component', [
             'allCategories' => $allCategories
         ])->layout('template.app');

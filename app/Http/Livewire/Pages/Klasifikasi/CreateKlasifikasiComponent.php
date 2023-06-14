@@ -20,7 +20,7 @@ class CreateKlasifikasiComponent extends Component
             'jabatan' => $this->jabatan
         ]);
         session()->flash('message', 'Berhasil menambahkan klasifikasi!');
-        return redirect(back());
+        return redirect(route('klasifikasi'));
     }
     public function render()
     {

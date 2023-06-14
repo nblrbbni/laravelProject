@@ -14,7 +14,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form wire:submit="create" autocomplete="off">
+            <form wire:submit.prevent="create" autocomplete="off">
                 <div class="mb-3">
                     <label class="form-label">Nama Lengkap</label>
                     <input type="text" wire:model="name" class="form-control" placeholder="Masukkan nama lengkap">

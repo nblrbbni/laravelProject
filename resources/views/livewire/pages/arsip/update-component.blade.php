@@ -14,10 +14,10 @@
 
     <div class="card">
         <div class="card-body">
-            <form wire:submit="update" autocomplete="off">
+            <form wire:submit.prevent="update" autocomplete="off">
                 <div class="mb-3">
                     <label class="form-label">Nama Dokumen</label>
-                    <input type="text" wire:model="name" class="form-control" name="example-text-input"
+                    <input type="text" wire:model="name" class="form-control"
                         placeholder="Masukkan nama dokumen">
                     @error('name')
                         <span class="error">{{ $message }}</span>
@@ -53,7 +53,7 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="btn btn-success">Simpan</button>
+                <button type="submit" class="btn btn-success">Update</button>
                 <a href="{{ route('arsip') }}" class="btn btn-red">
                    Kembali
                 </a>
