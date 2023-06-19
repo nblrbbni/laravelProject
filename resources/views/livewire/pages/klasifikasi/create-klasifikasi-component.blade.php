@@ -26,7 +26,7 @@
                 <div class="mb-3">
                     <div class="form-label">Jabatan</div>
                     <select type="text" class="form-select" id="select-users" wire:model="jabatan">
-                        <option selected="">Pilih Jabatan Anda</option>
+                        <option selected="">--Pilih Jabatan Anda--</option>
                         <option value="Kepala Sekolah">Kepala Sekolah</option>
                         <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
                         <option value="Tata Usaha">Tata Usaha</option>

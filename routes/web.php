@@ -43,7 +43,7 @@ Route::post('/postlogin', [LoginController::class, 'postlogin'])->name("postlogi
 // Route::post("/postlogin", 'LoginController@postlogin')->name("postlogin");
 Route::get("/logout", [LoginController::class, 'logout'])->name("logout");
 
-
+//Middleware
 Route::group(['middleware' => ['auth', 'CekRole:Admin']], function () {
     Route::get("/dashboard", HomeComponent::class)->name("dashboard");
     Route::get("/arsip", ArsipComponent::class)->name("arsip");

@@ -1,4 +1,9 @@
 <div class="mt-3">
+
+    <div class="title mt-3">
+        <h1>Daftar Pengguna</h1>
+    </div>
+
     <a href="{{ route('role.create') }}" class="btn btn-success">Tambah Role</a>
     <div class="mt-2">
         @if (session()->has('message'))
@@ -7,6 +12,7 @@
             </div>
         @endif
     </div>
+
     <div class="col-lg-12 mt-3">
         <div class="card">
             <div class="table-responsive">

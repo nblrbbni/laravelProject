@@ -29,15 +29,17 @@
                         <span class="nav-link-title"> Galeri File </span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::path() === 'klasifikasi' ? 'bg-primary' : '' }}"
-                        href="{{ route('klasifikasi') }}">
-                        <span class="nav-link-title"> Klasifikasi </span>
-                    </a>
-                </li>
+                @if (auth()->user()->role == 'User')
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::path() === 'klasifikasi' ? 'bg-primary' : '' }}"
+                            href="{{ route('klasifikasi') }}">
+                            <span class="nav-link-title"> Klasifikasi </span>
+                        </a>
+                    </li>
+                @endif
                 @if (auth()->user()->role == 'Admin')
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             data-bs-auto-close="outside" role="button" aria-expanded="false">
                             <span class="nav-link-title"> Pengaturan </span>
                         </a>

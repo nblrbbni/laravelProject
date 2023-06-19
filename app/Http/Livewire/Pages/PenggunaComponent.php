@@ -17,7 +17,7 @@ class PenggunaComponent extends Component
 
     public function render()
     {
-        $allCategories = Pengguna::query()->latest()->paginate(2);
+        $allCategories = Pengguna::query()->latest()->paginate(5);
         return view('livewire.pages.pengguna-component', [
             'allCategories' => $allCategories
         ])->layout('template.app');

@@ -15,7 +15,7 @@ class KlasifikasiComponent extends Component
     }
     public function render()
     {
-        $allCategories = Klasifikasi::query()->latest()->paginate(2);
+        $allCategories = Klasifikasi::query()->latest()->paginate(5);
         return view('livewire.pages.klasifikasi-component', [
             'allCategories' => $allCategories
         ])->layout('template.app');

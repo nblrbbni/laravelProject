@@ -1,4 +1,9 @@
 <div class="mt-3 mb-3">
+
+    <div class="title mt-3">
+        <h1>Daftar Pengguna</h1>
+    </div>
+
     <a href="{{ route('pengguna.create') }}" class="btn btn-success">Tambah Pengguna</a>
     <div class="mt-2">
         @if (session()->has('message'))
@@ -6,10 +11,6 @@
                 {{ session('message') }}
             </div>
         @endif
-    </div>
-
-    <div class="title mt-3">
-        <h1>Daftar Pengguna</h1>
     </div>
 
     <div class="col-lg-12 mt-3">

@@ -1,10 +1,8 @@
 <div class="mt-3 mb-3">
 
-    @if (auth()->user()->role == 'user')
     <div class="title mt-3">
         <h1>Daftar Klasifikasi</h1>
     </div>
-    @endif
 
     @if (auth()->user()->role == 'Admin')
         <a href="{{ route('klasifikasi.create') }}" class="btn btn-success">Tambah Klasifikasi</a>
