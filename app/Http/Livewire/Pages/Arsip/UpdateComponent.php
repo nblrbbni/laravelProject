@@ -9,7 +9,7 @@ use Livewire\WithFileUploads;
 class UpdateComponent extends Component
 {
     use WithFileUploads;
-    public $name, $upload, $date, $file;
+    public $name, $tipe, $upload, $date, $file;
     public $arsipId;
     public $findArsip;
     public function mount($arsipId)
@@ -17,6 +17,7 @@ class UpdateComponent extends Component
         $this->findArsip = Arsip::findOrFail($arsipId);
         $this->arsipId = $this->findArsip->id;
         $this->name = $this->findArsip->name;
+        $this->tipe = $this->findArsip->tipe;
         $this->upload = $this->findArsip->upload;
         $this->date = $this->findArsip->date;
         $this->file = $this->findArsip->file;
@@ -31,6 +32,7 @@ class UpdateComponent extends Component
         $updateArsip->update([
             'name' => $this->name,
             'upload' => $this->upload,
+            'tipe' => $this->tipe,
             'date' => $this->date,
             'file' => $this->file
         ]);

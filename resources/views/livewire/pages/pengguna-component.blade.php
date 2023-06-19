@@ -7,6 +7,11 @@
             </div>
         @endif
     </div>
+
+    <div class="title mt-3">
+        <h1>Daftar Pengguna</h1>
+    </div>
+
     <div class="col-lg-12 mt-3">
         <div class="card">
             <div class="table-responsive">
@@ -19,25 +24,31 @@
                             <th>Email</th>
                             <th>Password</th>
                             <th>Role User</th>
-                            <th class="w-1">Opsi</th>
+                            @if (auth()->user()->role == 'Admin')
+                                <th class="w-1">Opsi</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = $allCategories->firstItem() ?>
+                        <?php $i = $allCategories->firstItem(); ?>
                         @foreach ($allCategories as $item)
                             <tr>
                                 <td>{{ $i }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->jabatan }}</td>
-                                <td>{{ $item->email}}</td>
-                                <td>{{ $item->password}}</td>
-                                <td>{{ $item->roleuser}}</td>
-                                <td class="d-flex gap-1">
-                                    <a href="{{ route('pengguna.update', $item->id) }}" class="btn btn-blue">Edit</a>
-                                    <a href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
-                                </td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->password }}</td>
+                                <td>{{ $item->roleuser }}</td>
+                                @if (auth()->user()->role == 'Admin')
+                                    <td class="d-flex gap-1">
+                                        <a href="{{ route('pengguna.update', $item->id) }}"
+                                            class="btn btn-blue">Edit</a>
+                                        <a href="#" wire:click.prevent="destroy({{ $item->id }})"
+                                            class="btn btn-red">Delete</a>
+                                    </td>
+                                @endif
                             </tr>
-                            <?php $i++ ?>
+                            <?php $i++; ?>
                         @endforeach
                     </tbody>
                 </table>

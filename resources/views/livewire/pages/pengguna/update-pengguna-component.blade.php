@@ -8,7 +8,7 @@
         @endif
     </div>
 
-     <div class="title mt-3">
+    <div class="title mt-3">
         <h1>Update Pengguna</h1>
     </div>
 
@@ -23,7 +23,7 @@
                     @enderror
                 </div>
 
-                 <div class="mb-3">
+                <div class="mb-3">
                     <div class="form-label">Jabatan</div>
                     <select type="text" class="form-select" id="select-users" wire:model="jabatan">
                         <option selected="">Pilih Jabatan Anda</option>
@@ -74,7 +74,7 @@
 
                 <button type="submit" class="btn btn-success">Update</button>
                 <a href="{{ route('pengguna') }}" class="btn btn-red">
-                   Kembali
+                    Kembali
                 </a>
             </form>
         </div>

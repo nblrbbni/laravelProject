@@ -9,5 +9,5 @@ class Arsip extends Model
 {
     use HasFactory;
     protected $table = 'arsip';
-    protected $fillable = ['name', 'upload', 'date', 'file'];
+    protected $fillable = ['name', 'tipe', 'upload', 'date', 'file'];
 }

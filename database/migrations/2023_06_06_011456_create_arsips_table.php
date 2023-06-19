@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('arsip', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('tipe');
             $table->string('upload');
             $table->date('date');
-            $table->binary('file');
+            $table->string('file');
             $table->timestamps();
         });
     }

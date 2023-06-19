@@ -15,28 +15,33 @@
                         <tr>
                             <th>Nomor</th>
                             <th>Nama Dokumen</th>
-                            <th>Nama File</th>
+                            <th>Tipe File</th>
                             <th>Diupload oleh</th>
                             <th>Tanggal</th>
                             <th class="w-1">Opsi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = $allCategories->firstItem() ?>
+                        <?php $i = $allCategories->firstItem(); ?>
                         @foreach ($allCategories as $item)
                             <tr>
                                 <td>{{ $i }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->file }}</td>
+                                <td>{{ $item->tipe }}</td>
                                 <td>{{ $item->upload }}</td>
                                 <td>{{ $item->date }}</td>
                                 <td class="d-flex gap-1">
                                     <a href="{{ route('arsip.update', $item->id) }}" class="btn btn-blue">Edit</a>
-                                    <a href="#" wire:click.prevent="destroy({{ $item->id }})" class="btn btn-red">Delete</a>
-                                    <a href="/" class="btn btn-green">Unduh</a>
+                                    @if (auth()->user()->role == 'Admin')
+                                        <a href="#" wire:click.prevent="destroy({{ $item->id }})"
+                                            class="btn btn-red">Delete</a>
+                                    @endif
+                                    <button class="btn btn-green" wire:click="export">
+                                        Unduh
+                                    </button>
                                 </td>
                             </tr>
-                            <?php $i++ ?>
+                            <?php $i++; ?>
                         @endforeach
                     </tbody>
                 </table>

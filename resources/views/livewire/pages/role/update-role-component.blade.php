@@ -19,7 +19,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Update</button>
                 <a href="{{ route('role') }}" class="btn btn-red">
-                   Kembali
+                    Kembali
                 </a>
             </form>
         </div>

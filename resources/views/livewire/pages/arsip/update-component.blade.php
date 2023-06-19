@@ -17,8 +17,7 @@
             <form wire:submit.prevent="update" autocomplete="off">
                 <div class="mb-3">
                     <label class="form-label">Nama Dokumen</label>
-                    <input type="text" wire:model="name" class="form-control"
-                        placeholder="Masukkan nama dokumen">
+                    <input type="text" wire:model="name" class="form-control" placeholder="Masukkan nama dokumen">
                     @error('name')
                         <span class="error">{{ $message }}</span>
                     @enderror
@@ -55,7 +54,7 @@
 
                 <button type="submit" class="btn btn-success">Update</button>
                 <a href="{{ route('arsip') }}" class="btn btn-red">
-                   Kembali
+                    Kembali
                 </a>
             </form>
         </div>

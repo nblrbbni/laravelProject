@@ -8,7 +8,7 @@
         @endif
     </div>
 
-     <div class="title mt-3">
+    <div class="title mt-3">
         <h1>Tambah Role</h1>
     </div>
 
@@ -24,7 +24,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Simpan</button>
                 <a href="{{ route('role') }}" class="btn btn-red">
-                   Kembali
+                    Kembali
                 </a>
             </form>
         </div>

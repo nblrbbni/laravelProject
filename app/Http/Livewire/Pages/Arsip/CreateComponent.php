@@ -3,14 +3,14 @@
 namespace App\Http\Livewire\Pages\Arsip;
 
 use App\Models\Arsip;
-use League\CommonMark\Node\Block\Document;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use League\CommonMark\Node\Block\Document;
 
 class CreateComponent extends Component
 {
     use WithFileUploads;
-    public $name, $upload, $date, $file;
+    public $name, $tipe, $upload, $date, $file;
     protected $rules = [
         'name' => 'required|min:1',
     ];
@@ -20,13 +20,15 @@ class CreateComponent extends Component
 
         Arsip::create([
             'name' => $this->name,
+            'tipe' => $this->tipe,
             'upload' => $this->upload,
             'date' => $this->date,
             'file' => $this->file
         ]);
-        session()->flash('message', 'Arsip Dokumen Berhasil!');
+        session()->flash('message', 'Update dokumen sukses!');
         return redirect(route('arsip'));
     }
+
     public function render()
     {
         return view('livewire.pages.arsip.create-component')->layout('template.app');
